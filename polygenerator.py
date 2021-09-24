@@ -49,30 +49,6 @@ def recombine_edges(edges):
     return polygon
 
 
-def test_recombine_edges():
-    reference = [2, 11, 5, 44, 3]
-
-    edges = {
-        (3, 44),
-        (11, 2),
-        (5, 11),
-        (44, 5),
-        (2, 3),
-    }
-    result = recombine_edges(edges)
-    assert result == reference or reversed(result) == reference
-
-    edges = {
-        (3, 44),
-        (11, 2),
-        (11, 5),  # swapped, to check that they don't have to be ordered
-        (44, 5),
-        (2, 3),
-    }
-    result = recombine_edges(edges)
-    assert result == reference or reversed(result) == reference
-
-
 def orientation(u, v, w) -> float:
     uw_x = u[0] - w[0]
     uw_y = u[1] - w[1]
