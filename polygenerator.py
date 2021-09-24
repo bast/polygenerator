@@ -50,6 +50,8 @@ def recombine_edges(edges):
 
 
 def test_recombine_edges():
+    reference = [2, 11, 5, 44, 3]
+
     edges = {
         (3, 44),
         (11, 2),
@@ -57,7 +59,9 @@ def test_recombine_edges():
         (44, 5),
         (2, 3),
     }
-    assert recombine_edges(edges) == [2, 11, 5, 44, 3]
+    result = recombine_edges(edges)
+    assert result == reference or reversed(result) == reference
+
     edges = {
         (3, 44),
         (11, 2),
@@ -65,7 +69,8 @@ def test_recombine_edges():
         (44, 5),
         (2, 3),
     }
-    assert recombine_edges(edges) == [2, 11, 5, 44, 3]
+    result = recombine_edges(edges)
+    assert result == reference or reversed(result) == reference
 
 
 def orientation(u, v, w) -> float:
