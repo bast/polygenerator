@@ -1,4 +1,5 @@
-[![License](https://img.shields.io/badge/license-%20MIT-blue.svg)](LICENSE)
+[![license](https://img.shields.io/badge/license-%20MIT-blue.svg)](LICENSE)
+[![test status](https://github.com/bast/polygenerator/workflows/Test/badge.svg)](https://github.com/bast/polygenerator/actions)
 
 
 # polygenerator
