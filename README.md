@@ -15,7 +15,11 @@ algorithms or to generate maps.
 
 ## Example
 
-...
+![random star shaped polygon](img/random_star_shaped_polygon.png)
+
+![random convex polygon](img/random_convex_polygon.png)
+
+![random polygon](img/random_polygon.png)
 
 
 ## API
