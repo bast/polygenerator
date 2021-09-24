@@ -10,7 +10,20 @@ algorithms or to generate maps.
 
 ## Installation
 
-...
+```
+$ pip install polygenerator
+```
+
+
+## API
+
+There are 3 functions and each returns a list of (x, y) tuples:
+- `random_convex_polygon(num_points)`
+- `random_polygon(num_points)`
+- `random_star_shaped_polygon(num_points)`
+
+The generated polygon is made to fit the bounding box (0.0, 0.0) ... (1.0, 1.0)
+and you can then scale and translate it to where you need it.
 
 
 ## Example
@@ -68,17 +81,6 @@ polygon = random_convex_polygon(num_points=20)
 plot_polygon(polygon, "random_convex_polygon.png")
 ```
 ![random convex polygon](img/random_convex_polygon.png)
-
-
-## API
-
-There are 3 functions and each returns a list of (x, y) tuples:
-- `random_convex_polygon(num_points)`
-- `random_polygon(num_points)`
-- `random_star_shaped_polygon(num_points)`
-
-The generated polygon is made to fit the bounding box (0.0, 0.0) ... (1.0, 1.0)
-and you can then scale and translate it to where you need it.
 
 
 ## Notes
