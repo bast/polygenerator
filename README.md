@@ -1,5 +1,6 @@
 [![license](https://img.shields.io/badge/license-%20MIT-blue.svg)](LICENSE)
 [![test status](https://github.com/bast/polygenerator/workflows/Test/badge.svg)](https://github.com/bast/polygenerator/actions)
+[![link to PyPI](https://badge.fury.io/py/polygenerator.svg)](https://badge.fury.io/py/polygenerator)
 
 
 # polygenerator
