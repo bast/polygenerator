@@ -5,7 +5,7 @@
 
 # polygenerator
 
-Generates random polygons. This can be useful to test computational geometry
+Generates random simple polygons. This can be useful to test computational geometry
 algorithms or to generate maps.
 
 
