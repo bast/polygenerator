@@ -191,6 +191,9 @@ def random_convex_polygon(num_points):
 
     polygon = polygon_from_vectors(vs_sorted)
 
+    if polygon_is_clockwise(polygon):
+        polygon = list(reversed(polygon))
+
     return fit_to_bbox(polygon)
 
 
@@ -205,6 +208,9 @@ def random_star_shaped_polygon(num_points):
         x = r * math.cos(angle)
         y = r * math.sin(angle)
         polygon.append((x, y))
+
+    if polygon_is_clockwise(polygon):
+        polygon = list(reversed(polygon))
 
     return fit_to_bbox(polygon)
 
@@ -295,6 +301,15 @@ def no_edges_intersect(polygon) -> bool:
     return True
 
 
+def polygon_is_clockwise(polygon) -> bool:
+    num_points = len(polygon)
+    s = 0.0
+    for i in range(num_points):
+        j = (i + 1) % num_points
+        s += (polygon[j][0] - polygon[i][0]) * (polygon[j][1] + polygon[i][1])
+    return s > 0.0
+
+
 def random_polygon(num_points):
     """
     "repair" random sequence by 2-opt moves.
@@ -348,6 +363,9 @@ def random_polygon(num_points):
     vertices = recombine_edges(non_intersecting_edges)
 
     polygon = list(map(lambda v: points[v], vertices))
+
+    if polygon_is_clockwise(polygon):
+        polygon = list(reversed(polygon))
 
     return fit_to_bbox(polygon)
 
