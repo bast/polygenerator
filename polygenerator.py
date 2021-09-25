@@ -13,7 +13,7 @@ from collections import defaultdict
 
 
 __all__ = ["random_polygon", "random_convex_polygon", "random_star_shaped_polygon"]
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 
 def recombine_edges(edges):
