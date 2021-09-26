@@ -23,7 +23,7 @@ There are 3 functions and each returns a list of (x, y) tuples:
 - `random_polygon(num_points)`
 - `random_star_shaped_polygon(num_points)`
 
-All polygons are generated to be counterclockwise. You can reverse the order
+All polygons are generated to be **counterclockwise**. You can reverse the order
 outside if you need the points in clockwise order.
 
 The generated polygon is made to fit the bounding box (0.0, 0.0) ... (1.0, 1.0)
